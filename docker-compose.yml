@@ -28,7 +28,7 @@ services:
       #- "DOCKER_USER=$USER"
     volumes:
       - "./melov.vscode.config.yaml:/home/coder/.config/code-server/config.yaml:rw"
-      - "./apps:/home/coder/app:rw"
+      - "./apps:/home/coder/apps:rw"
 
 
     
