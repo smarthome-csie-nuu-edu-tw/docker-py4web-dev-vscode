@@ -10,6 +10,7 @@ services:
       - LETSENCRYPT_HOST=web.py4web.176.mlc.app
       - LETSENCRYPT_EMAIL=m0724001@gm.nuu.edu.tw
       - VIRTUAL_PORT=8000
+      - DASHBOARD_PASSWORD=cccc
     expose: 
       - 8000
     volumes: 

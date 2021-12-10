@@ -1,4 +1,5 @@
 FROM docker.io/bitnami/python:3.7
+ARG DASHBOARD_PASSWORD test123
 WORKDIR /
 
 ## py4web Install
@@ -9,4 +10,5 @@ COPY apps /apps
 
 EXPOSE 8000
 
-CMD py4web run apps
+CMD py4web set_password --password ${DASHBOARD_PASSWORD} && \
+    py4web run apps
