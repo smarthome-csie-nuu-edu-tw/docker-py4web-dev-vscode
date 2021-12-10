@@ -11,4 +11,4 @@ COPY apps /apps
 EXPOSE 8000
 
 CMD py4web set_password --password ${DASHBOARD_PASSWORD} && \
-    py4web run apps
+    py4web run --host 0.0.0.0 apps  
