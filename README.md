@@ -4,6 +4,7 @@ py4web的容器化開發與部屬結構，此架構仍可配合任意的資料�
 
 ## 注意事項
 * 開發環境內Work資料夾為使用者永久儲存地方
+* 開發環境內apps資料夾為當前部屬到web的程式碼內容同步
 
 ## py4web的Dashboard密碼更換
 修改專案內的`docker-compose.yaml`檔案
