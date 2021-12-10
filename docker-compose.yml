@@ -32,4 +32,9 @@ services:
       #- "DOCKER_USER=$USER"
     volumes:
       - "./vscode/melo.config.yaml:/home/coder/.config/code-server/config.yaml:rw"
-      - "./apps:/home/coder/apps:rw"
+      - melo_vscode_data:/home/coder/work
+      #- "./apps:/home/coder/apps:rw"
+
+volumes:
+  melo_vscode_data:
+    driver: local
