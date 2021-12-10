@@ -1,0 +1,35 @@
+version: '3'
+services:
+  # py4web前端部屬測試(編譯結果顯示)
+  web:
+    build: ./
+    # image: docker.io/bitnami/apache:2.4-debian-10
+    environment:
+      # 反向代理服務機制
+      - VIRTUAL_HOST=web.py4web.176.mlc.app
+      - LETSENCRYPT_HOST=web.py4web.176.mlc.app
+      - LETSENCRYPT_EMAIL=m0724001@gm.nuu.edu.tw
+      - VIRTUAL_PORT=8000
+    expose: 
+      - 8000
+    volumes: 
+      - ./app:/app:rw
+
+  vscode-melo:
+    image: codercom/code-server:latest
+    #user: "$(id -u):$(id -g)"
+    restart: always
+    environment:
+      # 反向代理服務機制
+      - VIRTUAL_HOST=melo.py4web.176.mlc.app
+      - LETSENCRYPT_HOST=melo.py4web.176.mlc.app
+      - LETSENCRYPT_EMAIL=m0724001@gm.nuu.edu.tw
+      - VIRTUAL_PORT=8080
+      #- "DOCKER_USER=$USER"
+    volumes:
+      - "./melov.vscode.config.yaml:/home/coder/.config/code-server/config.yaml:rw"
+      - "./app:/home/coder/app:rw"
+
+
+    
+
