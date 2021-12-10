@@ -18,8 +18,8 @@ services:
 
   vscode-melo:
     build:
-      context: vscode
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: vscode/Dockerfile
     # image: codercom/code-server:latest
     # user: "$(id -u):$(id -g)"
     restart: always
