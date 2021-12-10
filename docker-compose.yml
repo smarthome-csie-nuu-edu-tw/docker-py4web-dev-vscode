@@ -16,8 +16,11 @@ services:
       - ./apps:/app:rw
 
   vscode-melo:
-    image: codercom/code-server:latest
-    #user: "$(id -u):$(id -g)"
+    build:
+      context: vscode
+      dockerfile: Dockerfile
+    # image: codercom/code-server:latest
+    # user: "$(id -u):$(id -g)"
     restart: always
     environment:
       # 反向代理服務機制
