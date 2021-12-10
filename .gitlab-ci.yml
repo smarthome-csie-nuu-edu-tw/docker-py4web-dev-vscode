@@ -1,0 +1,21 @@
+include:
+  - project: 'csie-406/doc-gitlab-406'
+    ref: master
+    file: 'csie-406-ci.yaml'
+  - project: 'ziyi-bear/gitlab-ci-template'
+    ref: main
+    file: ci/templates/Docker.gitlab-ci.yml
+
+variables:
+  FF_GITLAB_REGISTRY_HELPER_IMAGE: "true"
+  GIT_DEPTH: 1
+  ACME_REGISTRATION_EMAIL: "m0724001@gm.nuu.edu.tw"
+  DOCKER_IP: 120.105.129.176
+  #HARBOR_REG: docker.io
+
+stages:
+  - build
+  - test
+  - review test
+  - production
+  - deploy
