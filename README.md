@@ -4,8 +4,10 @@ py4web的容器化開發與部屬結構，此架構仍可配合任意的資料�
 在目前範例中假設開發者為`Melo`，專案Push後會自動進行部屬至伺服器
 
 ## 專案連結
-* 部屬網頁: `web.py4web.176.mlc.app`
-* 開發者線上個人開發環境: `melo.py4web.176.mlc.app`
+密碼可在下方密碼修改的說明來做動態調整
+* 部屬網頁: `web.py4web.176.mlc.app`，預設Dashboard密碼`cccc`
+* 開發者線上個人開發環境: `melo.py4web.176.mlc.app`，預設`SystexSystexSystex`
+
 
 ## 注意事項
 * 開發環境內Work資料夾為使用者永久儲存地方
