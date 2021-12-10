@@ -1,5 +1,5 @@
 FROM docker.io/bitnami/python:3.7
-ARG DASHBOARD_PASSWORD test123
+ARG DASHBOARD_PASSWORD=test123
 WORKDIR /
 
 ## py4web Install
