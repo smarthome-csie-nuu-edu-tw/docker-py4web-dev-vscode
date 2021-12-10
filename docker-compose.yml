@@ -30,5 +30,5 @@ services:
       - VIRTUAL_PORT=8080
       #- "DOCKER_USER=$USER"
     volumes:
-      - "./melo.vscode.config.yaml:/home/coder/.config/code-server/config.yaml:rw"
+      - "./vscode/melo.config.yaml:/home/coder/.config/code-server/config.yaml:rw"
       - "./apps:/home/coder/apps:rw"
